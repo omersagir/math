@@ -1,0 +1,26 @@
+def asal_mi(x):
+    bölenler =0
+    for i in range(2,x):
+        if x%i==0:
+            bölenler +=1
+    if bölenler ==0 and x>1:
+        return 1
+    else:
+        return 0
+    
+superasal=[]
+
+for n in range(9999,100000):
+    a1=n//10
+    if asal_mi(a1)== 1:
+        a2=a1//10
+        if asal_mi(a2)==1:
+            a3=a2//10
+            if asal_mi(a3)==1:
+                a4=a3//10
+                if asal_mi(a4)==1:
+                    superasal.append(n)
+
+
+        
+print(superasal)
