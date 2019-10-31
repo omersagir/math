@@ -1,0 +1,11 @@
+from numpy import *
+
+from scipy import mat
+
+from scipy import linalg
+
+A = mat('[1 -1 -2; 3 -2 -4; 1 -2 -1]')
+b = mat('[3;4;-8]')
+
+print(linalg.solve(A, b))
+    
