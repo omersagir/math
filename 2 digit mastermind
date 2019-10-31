@@ -1,0 +1,37 @@
+from random import randint
+sayı = randint(10,98)
+n1 = sayı//10
+n2 = sayı-n1*10
+c = 1
+
+while True:
+    
+    tahmin =int(input("tahmininizi giriniz"))
+    if (tahmin>= 10 and tahmin <100):
+        pass
+    else:
+        tahmin =int(input("lütfen iki basamaklı sayı giriniz"))
+        
+    tahmin1 = tahmin//10
+    tahmin2 = tahmin - tahmin1*10
+
+    tahmin1 = int(tahmin1)
+    tahmin2 = int(tahmin2)
+
+    yanlisyer = 0
+
+    if tahmin1 != n1:
+        yanlisyer += 1
+    if tahmin2 != n2:
+        yanlisyer += 1
+
+
+    if yanlisyer == 0:
+
+        print('Tebrikler!')
+        print( str(c) + ' deneme de buldunuz!')
+        break
+
+    else:
+        print(str(2-yanlisyer) + ' basamak doğru')
+    c += 1
