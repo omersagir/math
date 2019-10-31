@@ -1,0 +1,13 @@
+a = int(input("ilk sayıyı giriniz"))
+b = int(input("ikinci sayıyı giriniz"))
+
+if a > b:
+    (a,b) = (b,a)
+
+for i in range(a,0,-1):
+    if a%i ==0 and b%i==0:
+        obeb = i
+        break
+okek = int((a*b)/obeb)
+print(a,",",b,"sayılarının obebi : ",obeb)
+print(a,",",b,"sayılarının okeki : ",okek)
