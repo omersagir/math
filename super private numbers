@@ -10,17 +10,24 @@ def asal_mi(x):
     
 superasal=[]
 
-for n in range(9999,100000):
-    a1=n//10
-    if asal_mi(a1)== 1:
-        a2=a1//10
-        if asal_mi(a2)==1:
-            a3=a2//10
-            if asal_mi(a3)==1:
-                a4=a3//10
-                if asal_mi(a4)==1:
-                    superasal.append(n)
-
-
+def super_asal_mi(n):
+    
+    if asal_mi(n)== 1:
+        a1=n//10
         
-print(superasal)
+        if asal_mi(a1)==1:
+            a2=a1//10
+            if asal_mi(a2)==1:
+                a3=a2//10
+                
+                if asal_mi(a3)==1:
+                    a4=a3//10
+                    if asal_mi(a4)==1:
+                        return True
+        else:
+            return False
+
+
+for i in range(10000,100000):
+    if super_asal_mi(i):
+        print(i)
